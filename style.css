@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+body {
+  font-family: "poppins";
+  padding: 20px;
+}
+:root {
+  --primary-blue: rgb(60, 161, 223);
+  --secondary-blue: rgb(9, 90, 155);
+}
+
+header,
+footer,
+.details {
+  text-align: center;
+  background-color: var(--secondary-blue);
+  padding: 10px;
+  text-align: center;
+  border: none;
+  color: white;
+}
+
+.link-header {
+  text-decoration: underline;
+  font-weight: light;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.link-arrow {
+  font-size: 15px;
+  animation: pointdown 0.8s alternate infinite ease;
+  text-align: center;
+}
+
+@keyframes pointdown {
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+header {
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+}
+header h3,
+.details {
+  letter-spacing: 1px;
+}
+.time {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.displayName,
+.currentDay,
+.currentTime {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 2px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+p {
+  text-indent: 45px;
+}
+
+.links .link a {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.links .link a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(
+    to right,
+    var(--primary-blue),
+    var(--secondary-blue)
+  );
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
+.links .link a:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+footer {
+  border-radius: 0 0 10px 10px;
+  margin-top: 20px;
+}
+
+main {
+  font-size: 14px;
+}
+
+.details {
+  text-transform: uppercase;
+  background-color: var(--primary-blue);
+  border-radius: none;
+}
+
+.writter-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.displayName {
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+  .links .link a {
+    background: none;
+    color: var(--secondary-blue);
+    font-weight: bold;
+  }
+
+  .links .link a:hover {
+    transform: scale(1);
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links .link a:hover {
+    transform: scale(1);
+  }
+
+  header,
+  main,
+  .links .link :any-link {
+    font-size: 12px;
+  }
+}
